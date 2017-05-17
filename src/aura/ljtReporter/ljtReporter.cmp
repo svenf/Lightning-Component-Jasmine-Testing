@@ -1,0 +1,15 @@
+<aura:component extensible="true">
+    <ltng:require styles="{!$Resource.ljtResources + '/jasmine/jasmine_2_4_1.css'}"
+                  scripts="{!join(',', $Resource.ljtResources + '/jasmine/jasmine_2_4_1.js',
+                          $Resource.ljtResources + '/jasmine/jasmine_2_4_1_console.js',
+                          $Resource.ljtResources + '/jasmine/jasmine_2_4_1_html.js',
+                          $Resource.ljtResources + '/jasmine/jasmine_2_4_1_boot.js')}" />
+
+    <aura:attribute name="testsRun" type="Boolean" default="false" />
+    <aura:attribute name="result" type="object" />
+
+    <aura:registerEvent name="ljtReporterInitialised_Event" type="c:ljtReporterInitialised_Event" />
+    <aura:handler event="c:ljtInitialiseReporter_Event" action="{!c.initialiseJasmineReporter}"/>
+
+    {!v.body}
+</aura:component>
