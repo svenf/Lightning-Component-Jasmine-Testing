@@ -1,1 +1,1 @@
-# Lightning-Component-Jasmine-Testing
+# Unit Testing Lightning Components with Jasmine
